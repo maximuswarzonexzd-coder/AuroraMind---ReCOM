@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Aurora Mind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600;800&family=Space+Grotesk:wght@300;500;700&family=Fira+Code:wght@300;400;500&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/theme-dark.css">
+    <link rel="stylesheet" href="../styles/aurora-v2-core.css">
+    <link rel="stylesheet" href="../styles/aurora-v2-components.css">
+    <link rel="stylesheet" href="../styles/aurora-v2-animations.css">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="hex-overlay"></div>
+    <canvas id="canvas-bg"></canvas>
+    <div class="bg-glow" id="glow"></div>
+    <div class="vignette"></div>
+
+    <div class="ticker-bar">
+        <div class="ticker-label">PORTFOLIO</div>
+        <div class="ticker-track">
+            <span class="ticker-item"><strong>847+</strong> PROJETOS DEPLOYED</span>
+            <span class="ticker-item">INDUSTRIAL · FINTECH · E-COMMERCE · SAÚDE</span>
+            <span class="ticker-item"><strong>847+</strong> PROJETOS DEPLOYED</span>
+            <span class="ticker-item">INDUSTRIAL · FINTECH · E-COMMERCE · SAÚDE</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="../index.html" class="logo">MAXIMUS</a>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        <div class="nav-links">
+            <a href="../index.html">← Início</a>
+            <a href="about.html" class="page-link">Sobre</a>
+            <a href="contact.html" class="page-link">Contato</a>
+            <div class="sys-control-panel"><div class="sys-dot"></div> PORTFOLIO // LIVE</div>
+        </div>
+    </nav>
+
+    <section id="portfolio-page" data-section-id="PF" style="padding-top: 200px;">
+        <div class="section-inner">
+            <div class="breadcrumb"><a href="../index.html">HOME</a> <span>/</span> PORTFOLIO</div>
+            <span class="section-tag reveal">// DEPLOYED SYSTEMS ARCHIVE</span>
+            <h1 class="main-title reveal">PORT<span>FOLIO</span></h1>
+            <p style="color: var(--text-dim); max-width: 700px; margin-bottom: 40px;" class="reveal">
+                Seleção de projetos reais entregues pela Aurora Mind. Cada sistema foi projetado para performance, segurança e escalabilidade.
+            </p>
+
+            <div class="portfolio-grid" id="render-portfolio-full"></div>
+
+            <div class="section-divider"></div>
+
+            <h2 class="main-title reveal" style="font-size: clamp(1.8rem, 4vw, 3rem);">POR <span>CATEGORIA</span></h2>
+            <div class="grid-row grid-row-2" style="margin-top: 40px;">
+                <div class="card reveal">
+                    <span class="price-tag">12 PROJETOS</span>
+                    <h3>Industrial & ERP</h3>
+                    <p>Sistemas de gestão industrial, controle de produção e automação de linhas com C#/.NET e integração IoT.</p>
+                    <ul class="feature-list">
+                        <li>Controle de Produção</li>
+                        <li>Integração IoT</li>
+                        <li>Dashboards Real-time</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <span class="price-tag">28 PROJETOS</span>
+                    <h3>E-Commerce & Vendas</h3>
+                    <p>Lojas virtuais de alta conversão com checkout otimizado, integração de pagamentos e SEO avançado.</p>
+                    <ul class="feature-list">
+                        <li>Stripe / Mercado Pago</li>
+                        <li>Performance 95+</li>
+                        <li>Funil de Conversão</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <span class="price-tag">18 PROJETOS</span>
+                    <h3>APIs & Microserviços</h3>
+                    <p>Arquiteturas distribuídas com Rust, Node.js e containers Docker/Kubernetes.</p>
+                    <ul class="feature-list">
+                        <li>REST & GraphQL</li>
+                        <li>Event-Driven</li>
+                        <li>Auto-scaling</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <span class="price-tag">35 PROJETOS</span>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas de alta conversão com design cyber-industrial e carregamento sub-segundo.</p>
+                    <ul class="feature-list">
+                        <li>Lighthouse 98+</li>
+                        <li>WhatsApp Integration</li>
+                        <li>Analytics Built-in</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-banner reveal" style="margin-top: 60px;">
+                <div>
+                    <h3>Quer um projeto como estes?</h3>
+                    <p>Fale conosco e receba uma proposta personalizada em 24h.</p>
+                </div>
+                <a href="https://wa.me/5532999577201" class="btn-main btn-filled" style="width: auto; padding: 18px 40px;">Solicitar Orçamento →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="footer-logo">AURORA<span style="color: var(--neon-cyan);">MIND</span></a>
+        <p class="copy-tag">© 2026 DIGITAL ENGINEERING BY MAXIMUS | BARBACENA, MG</p>
+    </footer>
+
+    <script src="../js/aurora-v2-engine.js"></script>
+    <script>
+        const fullPortfolio = [
+            { title: "ERP Industrial Metalúrgica", tags: ["C#", ".NET", "SQL Server"], code: "ProductionLine.Optimize()\n  .WithAI()\n  .Deploy();" },
+            { title: "E-Commerce Moda Premium", tags: ["Node.js", "React", "Stripe"], code: "checkout.create({\n  mode: 'subscription'\n});" },
+            { title: "Dashboard Logística", tags: ["Rust", "WebSocket", "Redis"], code: "fleet.track()\n  .realtime()\n  .alert();" },
+            { title: "App Saúde Telemedicina", tags: ["C++", "API", "HIPAA"], code: "session.encrypt()\n  .stream()\n  .diagnose();" },
+            { title: "Automação WhatsApp Bot", tags: ["Python", "Node.js", "NLP"], code: "bot.handle(msg)\n  .queue()\n  .respond();" },
+            { title: "Portal Educacional", tags: ["C#", "Blazor", "Azure"], code: "course.enroll()\n  .progress()\n  .certify();" },
+            { title: "Fintech PIX Gateway", tags: ["Rust", "Security", "BACEN"], code: "pix.transfer()\n  .validate()\n  .confirm();" },
+            { title: "Cardápio Digital QR", tags: ["HTML5", "PWA", "Cloud"], code: "menu.load()\n  .cache()\n  .serve();" },
+            { title: "CRM Imobiliário", tags: ["C#", "Angular", "Maps"], code: "property.list()\n  .filter()\n  .schedule();" }
+        ];
+        const container = document.getElementById('render-portfolio-full');
+        if (container) {
+            fullPortfolio.forEach((p, i) => {
+                container.innerHTML += `
+                    <div class="portfolio-item reveal tilt-card">
+                        <div class="tilt-shine"></div>
+                        <div class="portfolio-preview"><pre class="portfolio-code">${p.code}</pre></div>
+                        <div class="portfolio-overlay">
+                            <h4>${p.title}</h4>
+                            <span>// PRJ_${String(i + 1).padStart(3, '0')}</span>
+                            <div class="portfolio-tags">${p.tags.map(t => `<span class="portfolio-tag">${t}</span>`).join('')}</div>
+                        </div>
+                    </div>`;
+            });
+            setTimeout(() => document.querySelectorAll('.reveal').forEach(el => {
+                new IntersectionObserver((entries, obs) => {
+                    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+                }, { threshold: 0.1 }).observe(el);
+            }), 100);
+        }
+    </script>
+</body>
+</html>

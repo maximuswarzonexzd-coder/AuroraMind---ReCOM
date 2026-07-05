@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aurora Mind — Especialistas em desenvolvimento de sistemas críticos e interfaces de alto impacto. C#, C++, Node.js, Rust.">
+    <meta name="theme-color" content="#010208">
+    <title>Aurora Mind | Digital Engineering</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600;800&family=Space+Grotesk:wght@300;500;700&family=Fira+Code:wght@300;400;500&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme-dark.css">
+    <link rel="stylesheet" href="styles/aurora-v2-core.css">
+    <link rel="stylesheet" href="styles/aurora-v2-components.css">
+    <link rel="stylesheet" href="styles/aurora-v2-animations.css">
+</head>
+<body>
+
+    <!-- ═══ BACKGROUND LAYERS ═══ -->
+    <div class="cyber-grid"></div>
+    <div class="hex-overlay"></div>
+    <canvas id="canvas-bg"></canvas>
+    <div class="bg-glow" id="glow"></div>
+    <div class="vignette"></div>
+
+    <!-- ═══ TICKER BAR ═══ -->
+    <div class="ticker-bar">
+        <div class="ticker-label">LIVE</div>
+        <div class="ticker-track">
+            <span class="ticker-item"><strong>CORE v3.0</strong> ONLINE — 99.97% UPTIME</span>
+            <span class="ticker-item">PROJETOS ENTREGUES: <strong>847+</strong></span>
+            <span class="ticker-item">LATÊNCIA MÉDIA: <strong>8ms</strong></span>
+            <span class="ticker-item">STACK: <strong>C# · C++ · RUST · NODE.JS</strong></span>
+            <span class="ticker-item">LOCALIZAÇÃO: <strong>BARBACENA, MG</strong></span>
+            <span class="ticker-item">SUPORTE: <strong>24/7 ATIVO</strong></span>
+            <span class="ticker-item"><strong>CORE v3.0</strong> ONLINE — 99.97% UPTIME</span>
+            <span class="ticker-item">PROJETOS ENTREGUES: <strong>847+</strong></span>
+            <span class="ticker-item">LATÊNCIA MÉDIA: <strong>8ms</strong></span>
+            <span class="ticker-item">STACK: <strong>C# · C++ · RUST · NODE.JS</strong></span>
+            <span class="ticker-item">LOCALIZAÇÃO: <strong>BARBACENA, MG</strong></span>
+            <span class="ticker-item">SUPORTE: <strong>24/7 ATIVO</strong></span>
+        </div>
+    </div>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav>
+        <a href="#hero" class="logo">MAXIMUS</a>
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="#hero" data-index="00">Início</a>
+            <a href="#solucoes" data-index="01">Soluções</a>
+            <a href="#feedbacks" data-index="02">Logs</a>
+            <a href="#assinaturas" data-index="03">Planos</a>
+            <a href="#faq" data-index="04">Terminal</a>
+            <a href="#tech" data-index="05">Stack</a>
+            <a href="#portfolio" data-index="06">Cases</a>
+            <a href="#contato" data-index="07">Contato</a>
+            <a href="pages/portfolio.html" class="page-link">Portfolio →</a>
+            <a href="pages/about.html" class="page-link">Sobre →</a>
+            <div class="sys-control-panel">
+                <div class="sys-dot"></div>
+                CORE v3.0 // ONLINE // 12ms
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ SECTION 01: HERO ═══ -->
+    <section id="hero" data-section-id="01">
+        <div class="section-inner">
+            <div class="hero-grid-wrapper">
+                <div class="hero-content">
+                    <span class="section-tag anim-fade-down">01 // APPLIED DIGITAL ENGINEERING</span>
+                    <h1 class="main-title glitch-title anim-fade-up anim-delay-1">AURORA <span>MIND</span></h1>
+                    <p class="anim-fade-up anim-delay-2">
+                        Especialistas em desenvolvimento de sistemas críticos e interfaces de alto impacto.
+                        Dominamos tecnologias de baixo e alto nível: <b>C#, C++, Node.js e Rust</b>.
+                        Engenharia de software focada em performance e escalabilidade.
+                    </p>
+                    <div class="hero-actions anim-fade-up anim-delay-3">
+                        <a href="#solucoes" class="btn-main btn-filled" style="width: 260px;">Nossas Soluções</a>
+                        <a href="https://wa.me/5532999577201" class="btn-main" style="width: 260px;">Abrir Chamado Técnico</a>
+                    </div>
+                    <div class="hero-stats-row reveal anim-delay-4">
+                        <div class="hero-stat">
+                            <span class="hero-stat-value" data-target="847" data-suffix="+">0</span>
+                            <span class="hero-stat-label">Projetos</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value" data-target="99" data-suffix=".9%">0</span>
+                            <span class="hero-stat-label">Uptime</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value" data-target="12" data-suffix="ms">0</span>
+                            <span class="hero-stat-label">Latência</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value" data-target="24" data-suffix="/7">0</span>
+                            <span class="hero-stat-label">Suporte</span>
+                        </div>
+                    </div>
+                    <div class="status-bar reveal anim-delay-5">
+                        <span class="status-chip"><span class="dot"></span> SECURE_CORE</span>
+                        <span class="status-chip"><span class="dot"></span> SSL/TLS ACTIVE</span>
+                        <span class="status-chip warn"><span class="dot"></span> PERF: MAX</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <div class="hud-display-center reveal-scale">
+                        <div class="hud-scanner"></div>
+                        <div class="hud-ring"></div>
+                        <div class="hud-ring-inner"></div>
+                        <div style="font-family: 'Fira Code'; font-size: 0.6rem; color: var(--neon-cyan); position: relative; z-index: 2;">// ARCH_INIT_OK</div>
+                        <div style="text-align: center; font-family: 'Space Grotesk'; font-size: 2rem; font-weight: 700; letter-spacing: 4px; position: relative; z-index: 2;">
+                            [MIND]
+                            <div style="font-family: 'Fira Code'; font-size: 0.65rem; color: var(--text-dim); font-weight: 300; margin-top: 10px; letter-spacing: 1px;">0x7FFDF99A2B</div>
+                            <div class="waveform" style="justify-content: center; margin-top: 16px;">
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
+                                <div class="waveform-bar"></div>
+                            </div>
+                        </div>
+                        <div style="font-family: 'Fira Code'; font-size: 0.55rem; color: var(--neon-lime); text-align: right; position: relative; z-index: 2;">STATUS: SECURE_CORE_RUNNING</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </section>
+
+    <!-- ═══ MARQUEE PARTNERS ═══ -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item">INDUSTRIAL</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">E-COMMERCE</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">SAÚDE</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">FINTECH</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">LOGÍSTICA</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">EDUCAÇÃO</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">INDUSTRIAL</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">E-COMMERCE</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">SAÚDE</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">FINTECH</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">LOGÍSTICA</span>
+            <span class="marquee-item">◆</span>
+            <span class="marquee-item">EDUCAÇÃO</span>
+            <span class="marquee-item">◆</span>
+        </div>
+    </div>
+
+    <!-- ═══ SECTION 02: SOLUÇÕES (ORIGINAL) ═══ -->
+    <section id="solucoes" data-section-id="02">
+        <div class="section-inner">
+            <span class="section-tag reveal">02 // SYSTEM CAPABILITIES</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">O QUE <span>PROJETAMOS</span></h2>
+            <div class="grid-row">
+                <div class="card tilt-card reveal anim-delay-1">
+                    <div class="tilt-shine"></div>
+                    <span class="price-tag">R$ 150 - 350</span>
+                    <h3>Site Básico</h3>
+                    <p>Presença digital imediata. Landing pages otimizadas para velocidade extrema.</p>
+                    <ul class="feature-list">
+                        <li>Design Único</li>
+                        <li>Performance Google 90+</li>
+                        <li>Integração WhatsApp</li>
+                        <li>Hospedagem Cloud</li>
+                    </ul>
+                    <a href="https://wa.me/5532999577201" class="btn-main">Consultar</a>
+                </div>
+                <div class="card tilt-card featured reveal anim-delay-2">
+                    <div class="tilt-shine"></div>
+                    <div class="card-header">
+                        <span class="price-tag">R$ 500 - 750</span>
+                        <span class="card-badge">Popular</span>
+                    </div>
+                    <h3>Site Profissional</h3>
+                    <p>Autoridade máxima. SEO avançado e múltiplas páginas estratégicas.</p>
+                    <ul class="feature-list">
+                        <li>Arquitetura SEO</li>
+                        <li>Copywriting de Vendas</li>
+                        <li>Dashboard Analytics</li>
+                        <li>Até 6 Páginas</li>
+                    </ul>
+                    <a href="https://wa.me/5532999577201" class="btn-main">Consultar</a>
+                </div>
+                <div class="card tilt-card reveal anim-delay-3">
+                    <div class="tilt-shine"></div>
+                    <span class="price-tag">R$ 1.700+</span>
+                    <h3>Sistemas Web</h3>
+                    <p>Lógica de negócios complexa e dashboards inteligentes sob medida.</p>
+                    <ul class="feature-list">
+                        <li>Backend C# / .NET</li>
+                        <li>Segurança Avançada</li>
+                        <li>APIs Escaláveis</li>
+                        <li>Bancos SQL/NoSQL</li>
+                    </ul>
+                    <a href="https://wa.me/5532999577201" class="btn-main">Consultar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION: STATS PANEL (NEW) ═══ -->
+    <section id="metricas" data-section-id="MET" style="min-height: auto; padding-top: 80px; padding-bottom: 80px;">
+        <div class="section-inner">
+            <span class="section-tag reveal">// PERFORMANCE METRICS</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2rem, 5vw, 3.5rem);">NÚMEROS <span>REAIS</span></h2>
+            <div class="stats-panel">
+                <div class="stat-box reveal anim-delay-1">
+                    <span class="stat-number" data-target="847" data-suffix="+">0</span>
+                    <span class="stat-label">Projetos Entregues</span>
+                </div>
+                <div class="stat-box reveal anim-delay-2">
+                    <span class="stat-number" data-target="99" data-suffix=".97%">0</span>
+                    <span class="stat-label">Uptime Garantido</span>
+                </div>
+                <div class="stat-box reveal anim-delay-3">
+                    <span class="stat-number" data-target="150" data-suffix="+">0</span>
+                    <span class="stat-label">Clientes Ativos</span>
+                </div>
+                <div class="stat-box reveal anim-delay-4">
+                    <span class="stat-number" data-target="8" data-suffix="ms">0</span>
+                    <span class="stat-label">Latência Média</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══ SECTION: TECH STACK (NEW) ═══ -->
+    <section id="tech" data-section-id="STK">
+        <div class="section-inner">
+            <span class="section-tag reveal">06 // TECHNOLOGY ARSENAL</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">NOSSA <span>STACK</span></h2>
+            <p style="color: var(--text-dim); max-width: 600px; margin-bottom: 20px;" class="reveal">
+                Domínio completo de tecnologias de baixo e alto nível para qualquer desafio de engenharia.
+            </p>
+            <div class="tech-grid" id="render-tech"></div>
+            <div class="code-block reveal" data-lang="C#" style="margin-top: 40px;">
+                <span class="keyword">public class</span> <span class="function">AuroraEngine</span> {<br>
+                &nbsp;&nbsp;<span class="keyword">public async Task</span>&lt;<span class="function">Result</span>&gt; <span class="function">Deploy</span>(<span class="function">Project</span> project) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">await</span> project.<span class="function">OptimizePerformance</span>();<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">await</span> project.<span class="function">LaunchToProduction</span>();<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION: PROCESS (NEW) ═══ -->
+    <section id="processo" data-section-id="PRC" style="min-height: auto;">
+        <div class="section-inner">
+            <span class="section-tag reveal">// DEVELOPMENT PIPELINE</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2rem, 5vw, 3.5rem);">NOSSO <span>PROCESSO</span></h2>
+            <div class="process-timeline">
+                <div class="process-step reveal anim-delay-1">
+                    <div class="process-num">01</div>
+                    <h4>Discovery</h4>
+                    <p>Análise profunda de requisitos e arquitetura</p>
+                </div>
+                <div class="process-step reveal anim-delay-2">
+                    <div class="process-num">02</div>
+                    <h4>Design</h4>
+                    <p>Prototipagem e UI/UX de alto impacto</p>
+                </div>
+                <div class="process-step reveal anim-delay-3">
+                    <div class="process-num">03</div>
+                    <h4>Build</h4>
+                    <p>Desenvolvimento com code review contínuo</p>
+                </div>
+                <div class="process-step reveal anim-delay-4">
+                    <div class="process-num">04</div>
+                    <h4>Test</h4>
+                    <p>QA automatizado e testes de carga</p>
+                </div>
+                <div class="process-step reveal anim-delay-5">
+                    <div class="process-num">05</div>
+                    <h4>Deploy</h4>
+                    <p>CI/CD com zero-downtime deployment</p>
+                </div>
+                <div class="process-step reveal anim-delay-6">
+                    <div class="process-num">06</div>
+                    <h4>Support</h4>
+                    <p>Monitoramento 24/7 e evolução contínua</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <div class="section-inner" style="padding: 0 var(--section-padding-x);">
+        <div class="cta-banner reveal">
+            <div>
+                <h3>Precisa de um sistema crítico?</h3>
+                <p>Consultoria técnica gratuita para avaliar seu projeto.</p>
+            </div>
+            <a href="https://wa.me/5532999577201" class="btn-main btn-filled" style="width: auto; padding: 18px 40px; white-space: nowrap;">Iniciar Projeto →</a>
+        </div>
+    </div>
+
+    <!-- ═══ SECTION 03: FEEDBACKS (ORIGINAL) ═══ -->
+    <section id="feedbacks" data-section-id="03">
+        <div class="section-inner">
+            <span class="section-tag reveal">03 // CUSTOMER SATISFACTION LOGS</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">FEED<span>BACKS</span></h2>
+            <div class="feedback-grid" id="render-feedbacks"></div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION: PORTFOLIO (NEW) ═══ -->
+    <section id="portfolio" data-section-id="CS">
+        <div class="section-inner">
+            <span class="section-tag reveal">07 // DEPLOYED SYSTEMS</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">CASES <span>RECENTES</span></h2>
+            <div class="portfolio-grid" id="render-portfolio"></div>
+            <div style="text-align: center; margin-top: 40px; width: 100%;" class="reveal">
+                <a href="pages/portfolio.html" class="btn-ghost page-link">Ver portfolio completo →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION: TERMINAL (NEW) ═══ -->
+    <section id="terminal" data-section-id="TRM" style="min-height: auto;">
+        <div class="section-inner">
+            <span class="section-tag reveal">// LIVE SYSTEM TERMINAL</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2rem, 5vw, 3rem);">SYS<span>TERMINAL</span></h2>
+            <div class="terminal-widget reveal scan-line-effect">
+                <div class="terminal-header">
+                    <div class="terminal-dot red"></div>
+                    <div class="terminal-dot yellow"></div>
+                    <div class="terminal-dot green"></div>
+                    <span class="terminal-title">maximus@aurora-mind — bash — 80×24</span>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <div class="terminal-line"><span class="prompt">maximus@aurora:~$</span> <span class="cmd">aurora --version</span></div>
+                    <div class="terminal-line"><span class="success">Aurora Mind Engine v3.0.0 — Digital Engineering</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION 04: ASSINATURAS (ORIGINAL) ═══ -->
+    <section id="assinaturas" data-section-id="04">
+        <div class="section-inner">
+            <span class="section-tag reveal">04 // CONTINUOUS SUPPORT</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">ASSINA<span>TURAS</span></h2>
+            <div class="grid-row">
+                <div class="card tilt-card reveal anim-delay-1">
+                    <div class="tilt-shine"></div>
+                    <span class="price-tag">R$ 99/mês</span>
+                    <h3>Standard</h3>
+                    <p>Monitoramento 24/7 e backups semanais automatizados.</p>
+                    <button class="btn-main" onclick="openGate('Standard', 99)">Ativar via PIX</button>
+                </div>
+                <div class="card tilt-card featured reveal anim-delay-2" style="border-color: var(--neon-magenta); box-shadow: 0 10px 30px rgba(255, 0, 122, 0.15);">
+                    <div class="tilt-shine"></div>
+                    <span class="price-tag">R$ 199/mês</span>
+                    <h3>VIP Plus</h3>
+                    <p>Suporte prioritário e alterações de conteúdo ilimitadas.</p>
+                    <button class="btn-main" onclick="openGate('VIP Plus', 199)">Ativar via PIX</button>
+                </div>
+                <div class="card tilt-card platinum reveal anim-delay-3">
+                    <div class="tilt-shine"></div>
+                    <span class="price-tag" style="color: var(--neon-gold);">R$ 799/mês</span>
+                    <h3 style="color: var(--neon-gold);">Platinum</h3>
+                    <p>Consultoria full-stack e novos recursos mensais dedicados.</p>
+                    <button class="btn-main btn-gold" onclick="openGate('Platinum', 799)">Ativar via PIX</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION: TEAM (NEW) ═══ -->
+    <section id="equipe" data-section-id="TM" style="min-height: auto;">
+        <div class="section-inner">
+            <span class="section-tag reveal">// ENGINEERING TEAM</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2rem, 5vw, 3.5rem);">A <span>EQUIPE</span></h2>
+            <div class="team-grid">
+                <div class="team-member reveal anim-delay-1 corner-brackets">
+                    <div class="team-avatar">M</div>
+                    <h4>Maximus Simões</h4>
+                    <span class="team-role">Lead Engineer</span>
+                    <p class="team-bio">Especialista em C#, C++, Rust e arquitetura de sistemas críticos. Fundador da Aurora Mind.</p>
+                </div>
+                <div class="team-member reveal anim-delay-2 corner-brackets">
+                    <div class="team-avatar">AI</div>
+                    <h4>Aurora AI</h4>
+                    <span class="team-role">Automation Core</span>
+                    <p class="team-bio">Motor de automação interno para deploy, testes e monitoramento contínuo de infraestrutura.</p>
+                </div>
+                <div class="team-member reveal anim-delay-3 corner-brackets">
+                    <div class="team-avatar">+</div>
+                    <h4>Você?</h4>
+                    <span class="team-role">Open Position</span>
+                    <p class="team-bio">Buscamos engenheiros apaixonados por performance e código limpo. Entre em contato.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION 05: FAQ (ORIGINAL) ═══ -->
+    <section id="faq" data-section-id="05">
+        <div class="section-inner">
+            <span class="section-tag reveal">05 // KNOWLEDGE BASE</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">FAQ <span>TERMINAL</span></h2>
+            <div class="faq-container" id="render-faq"></div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION: BLOG (NEW) ═══ -->
+    <section id="blog" data-section-id="BLG" style="min-height: auto;">
+        <div class="section-inner">
+            <span class="section-tag reveal">// ENGINEERING LOG</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2rem, 5vw, 3rem);">CHANGE<span>LOG</span></h2>
+            <div class="blog-grid" id="render-blog"></div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION: CONTACT (NEW) ═══ -->
+    <section id="contato" data-section-id="CT">
+        <div class="section-inner">
+            <span class="section-tag reveal">08 // OPEN CHANNEL</span>
+            <h2 class="main-title reveal" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">CON<span>TATO</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info-block reveal reveal-left">
+                    <h4>// Canais Diretos</h4>
+                    <div class="contact-row">
+                        <div class="contact-row-icon">WA</div>
+                        <span>+55 (32) 99957-7201</span>
+                    </div>
+                    <div class="contact-row">
+                        <div class="contact-row-icon">@</div>
+                        <span>contato@auroramind.dev</span>
+                    </div>
+                    <div class="contact-row">
+                        <div class="contact-row-icon">📍</div>
+                        <span>Barbacena, Minas Gerais — Brasil</span>
+                    </div>
+                    <div class="contact-row">
+                        <div class="contact-row-icon">⏰</div>
+                        <span>Seg–Sex 08:00–22:00 | Sáb 09:00–18:00</span>
+                    </div>
+                    <div class="progress-ring reveal" style="margin-top: 32px;">
+                        <svg width="120" height="120" viewBox="0 0 100 100">
+                            <circle class="ring-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="ring-fill" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="progress-ring-label">
+                            99%
+                            <small>UPTIME</small>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal reveal-right" id="contact-form">
+                    <div class="input-group">
+                        <label>Nome Completo</label>
+                        <input type="text" id="contact-name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="contact-email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Mensagem</label>
+                        <textarea id="contact-message" rows="5" placeholder="Descreva seu projeto..." required style="resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-main btn-filled">Enviar via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CHECKOUT MODAL (ORIGINAL) ═══ -->
+    <div id="checkout-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeGate()">FECHAR [X]</button>
+            <div class="lock-indicator">AGUARDANDO VALIDAÇÃO DE PAGAMENTO</div>
+            <div id="gate-step-1">
+                <h3 style="margin-bottom: 30px; text-transform: uppercase; font-family: 'Space Grotesk';">
+                    Ativar: <span id="gate-plan-name" style="color: var(--neon-cyan);"></span>
+                </h3>
+                <div class="input-group">
+                    <label>Projeto / Empresa</label>
+                    <input type="text" id="gate-client-project" placeholder="Nome da empresa">
+                </div>
+                <div class="input-group">
+                    <label>Responsável</label>
+                    <input type="text" id="gate-client-name" placeholder="Nome completo">
+                </div>
+                <button class="btn-main btn-filled" onclick="generateInvoice()" style="margin-top: 20px;">Gerar Chave de Acesso</button>
+            </div>
+            <div id="pix-container">
+                <h3 style="margin-bottom: 20px; font-family: 'Space Grotesk';">PAGAMENTO NUBANK</h3>
+                <div class="token-box" id="gate-token">PENDENTE</div>
+                <button class="btn-confirm" onclick="finalizeRequest()">Enviar Comprovante</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ FOOTER (ORIGINAL + EXPANDED) ═══ -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <a href="#hero">Início</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#assinaturas">Planos</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Páginas</h4>
+                <a href="pages/portfolio.html">Portfolio</a>
+                <a href="pages/about.html">Sobre Nós</a>
+                <a href="pages/contact.html">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <a href="#solucoes">Sites</a>
+                <a href="#solucoes">Sistemas Web</a>
+                <a href="#assinaturas">Manutenção</a>
+                <a href="#tech">Consultoria</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <a href="https://wa.me/5532999577201">WhatsApp</a>
+                <a href="mailto:contato@auroramind.dev">Email</a>
+                <a href="#contato">Barbacena, MG</a>
+            </div>
+        </div>
+        <a href="#" class="footer-logo">AURORA<span style="color: var(--neon-cyan);">MIND</span></a>
+        <p class="copy-tag">© 2026 DIGITAL ENGINEERING BY MAXIMUS | BARBACENA, MG</p>
+    </footer>
+
+    <script src="js/aurora-v2-engine.js"></script>
+</body>
+</html>
